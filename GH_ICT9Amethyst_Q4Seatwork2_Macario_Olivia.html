@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Converter</title>
+</head>
+<center>
+<body style="font-family: verditer lavanda; margin-top: 100px;">
+	<h1>Time Converter</h1>
+	<h4>minutes to seconds/hours/days</h4>
+	<table border="1px" style="border: dashed 1.5px; margin-top: 50px; border-collapse: collapse; text-align: center;" cellpadding="25px">
+		<tr>
+			<td><input type="text" id="id1" placeholder="Enter Minutes"> <br>
+			<input type="submit" value="to seconds" onclick="myfunction()"> <br>
+			<input type="submit" value="to hours" onclick="myfunction2()"> <br>
+			<input type="submit" value="to days" onclick="myfunction3()"> <br>
+			<p id="num1"></p></td>
+		</tr>
+		<tr>
+			<td><script>
+				function myfunction( ) {
+					var num1 = document.getElementById('id1').value;
+					var answer = Number(num1) * Number(60);
+					document.getElementById('num1').innerHTML = answer + " seconds";
+				}
+			</script>
+			<script>
+				function myfunction2( ) {
+					var num1 = document.getElementById('id1').value;
+					var answer = Number(num1) / Number(60);
+					document.getElementById('num1').innerHTML = answer + " hours";
+				}
+			</script>
+			<script>
+				function myfunction3( ) {
+					var num1 = document.getElementById('id1').value;
+					var answer = Number(num1) / Number(1440);
+					document.getElementById('num1').innerHTML = answer + " days";
+				}
+			</script>
+			</td>
+		</tr>
+	</table>
+</body>
+</center>
+</html>
